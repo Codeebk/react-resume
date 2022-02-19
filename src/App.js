@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography';
+import ExperienceEntry from './components/experience-entry';
 
 function App() {
+  const [experienceEntry, setExperienceEntry] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+    <Box sx={{
+      backgroundColor: 'primary.dark', }}>
+      <Typography variant="h2" gutterBottom component="div">
+        Codee King
+      </Typography>
+      <Typography variant="h5" gutterBottom component="div">
+        Software Engineer
+      </Typography>
+    </Box>
+    <Box sx={{
+      backgroundColor: 'primary.dark', }}>
+    <Typography variant="h5" gutterBottom component="div">
+        Technical Skills
+      </Typography>
+    </Box>
+    <Box sx={{
+      backgroundColor: 'primary.dark', }}>
+    <Typography variant="h5" gutterBottom component="div">
+        Experience
+      </Typography>
+      <ExperienceEntry experienceEntry={experienceEntry}/>
+
+    </Box>
+    <Box sx={{
+      backgroundColor: 'primary.dark', }}>
+    <Typography variant="h5" gutterBottom component="div">
+        Projects
+      </Typography>
+    </Box>
+    <Box sx={{
+      backgroundColor: 'primary.dark', }}>
+    <Typography variant="h5" gutterBottom component="div">
+        Education
+      </Typography>
+    </Box>
     </div>
   );
 }
