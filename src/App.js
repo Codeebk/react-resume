@@ -2,7 +2,10 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ExperienceEntry from "./components/experience-entry";
+import VisitorCounter from "./components/visitor-counter";
+import Container from '@mui/material/Container';
 
+let visitorCount = 7;
 let experienceEntries = [
   {
     title: "Quality Engineer II, Automation — Everbridge",
@@ -24,12 +27,14 @@ let experienceEntries = [
 function App() {
   const [experienceEntry, setExperienceEntry] = useState([]);
   return (
-    <div className="App">
+    <Container maxWidth="md">
+      <VisitorCounter visitorCount={visitorCount} />
       <Box
         sx={{
-          backgroundColor: "primary.dark",
+          backgroundColor: "primary.dark"
         }}
       >
+        
         <Typography variant="h2" gutterBottom component="div">
           Codee King
         </Typography>
@@ -76,7 +81,7 @@ function App() {
           Education
         </Typography>
       </Box>
-    </div>
+      </Container>
   );
 }
 
