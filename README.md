@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# This project is part of the AWS Cloud Resume
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A hands-on project consisting of 16 steps which can be found [here](https://cloudresumechallenge.dev/docs/the-challenge/aws/). I modified steps 2 and 3 to use React instead of just HTML/CSS.
 
 ## Available Scripts
 
