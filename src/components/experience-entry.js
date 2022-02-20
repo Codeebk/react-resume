@@ -7,12 +7,10 @@ function ExperienceEntry({experienceEntry}) {
     <Box sx={{
       backgroundColor: 'primary.light', }}>
       <Typography variant="h5" gutterBottom component="div">
-        experienece title
-        {/* {experienceEntry.title} */}
+        {experienceEntry.title}
       </Typography>
       <Typography variant="subtitle1" gutterBottom component="div">
-        experience description
-        {/* {experienceEntry.description} */}
+        {experienceEntry.description}
       </Typography>
     </Box>
     </div>
