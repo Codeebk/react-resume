@@ -3,9 +3,27 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ExperienceEntry from "./components/experience-entry";
 import VisitorCounter from "./components/visitor-counter";
-import Container from '@mui/material/Container';
+import Container from "@mui/material/Container";
+import TechnicalSkillsList from "./components/technical-skills-list";
+import { Chip } from "@mui/material";
 
 let visitorCount = 7;
+let technicalSkills = [
+  "HTML",
+  "CSS",
+  "Javascript/Typescript",
+  "Python",
+  "React",
+  "Playwright",
+  "Django",
+  "Git",
+  "GitLab",
+  "Azure",
+  "Jasmine",
+  "PyTest",
+  "Jira",
+  "Kanban",
+];
 let experienceEntries = [
   {
     title: "Quality Engineer II, Automation — Everbridge",
@@ -31,10 +49,10 @@ function App() {
       <VisitorCounter visitorCount={visitorCount} />
       <Box
         sx={{
-          backgroundColor: "primary.dark"
+          backgroundColor: "primary.dark",
         }}
       >
-        
+        <VisitorCounter visitorCount={visitorCount} />
         <Typography variant="h2" gutterBottom component="div">
           Codee King
         </Typography>
@@ -50,6 +68,7 @@ function App() {
         <Typography variant="h5" gutterBottom component="div">
           Technical Skills
         </Typography>
+        <TechnicalSkillsList technicalSkills={technicalSkills} />
       </Box>
       <Box
         sx={{
@@ -71,6 +90,9 @@ function App() {
         <Typography variant="h5" gutterBottom component="div">
           Projects
         </Typography>
+        <Typography variant="subtitle1" gutterBottom component="div">
+          SnackStalker - full-stack Python application
+        </Typography>
       </Box>
       <Box
         sx={{
@@ -80,8 +102,14 @@ function App() {
         <Typography variant="h5" gutterBottom component="div">
           Education
         </Typography>
+        <Typography variant="subtitle1" gutterBottom component="div">
+          General Assembly - Software Engineering Certificate - 2019
+        </Typography>
+        <Typography variant="subtitle1" gutterBottom component="div">
+          Austin Community College — Associate of Arts - Dance
+        </Typography>
       </Box>
-      </Container>
+    </Container>
   );
 }
 
