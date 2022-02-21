@@ -4,15 +4,16 @@ import Stack from "@mui/material/Stack";
 
 function TechnicalSkillsList({ technicalSkills }) {
   return (
-    <Box sx={{
-      backgroundColor: "primary.light",
-    }}>
-    <Stack direction="row" spacing={1}>
-  
-      {technicalSkills.map(skill => 
-        <Chip label={skill} />
-      )}
-    </Stack>
+    <Box
+      sx={{
+        backgroundColor: "primary.light",
+      }}
+    >
+      <Stack direction="row" spacing={1}>
+        {technicalSkills.map((skill) => (
+          <Chip label={skill.name} key={skill.name} />
+        ))}
+      </Stack>
     </Box>
   );
 }

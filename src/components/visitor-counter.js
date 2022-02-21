@@ -1,13 +1,13 @@
 import Typography from "@mui/material/Typography";
-import { Badge } from "@mui/material";
+import { Badge, Container } from "@mui/material";
 
 function VisitorCounter({ visitorCount }) {
   return (
-    <div>
-      <Badge badgeContent={visitorCount} color="primary">
-          Total Visits
+    <>
+      <Badge badgeContent={visitorCount} color="primary" >
+        Total Visits
       </Badge>
-    </div>
+    </>
   );
 }
 
